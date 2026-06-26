@@ -1,10 +1,23 @@
+@font-face {
+  font-family: 'Gopher';
+  src: url('../../../../public/fonts/Gopher-Regular.woff2') format('woff2'),
+       url('../../../../public/fonts/Gopher-Regular.woff') format('woff'),
+       url('../../../../public/fonts/Gopher-Regular.ttf') format('truetype');
+  font-display: swap; 
+}
 
+@font-face {
+  font-family: 'OakSans';
+  src: url('../../../../public/fonts/OakSans-Regular.ttf') format('truetype');
+  font-display: swap;
+}
 .hero {
   position: relative;
   width: 100%;
   overflow: hidden;
   background: #f9fafb;
-  border-radius: 30px;
+  border-radius: 26px;
+  font-family: "OakSans", Arial, Helvetica, sans-serif;
 }
 
 .carouselContainer {
@@ -98,6 +111,7 @@
   color: #ffffff;
   line-height: 1.2;
   margin-bottom: 16px;
+  font-family: "Gopher", Georgia, 'Times New Roman', Times, serif;
 }
 
 .title span {
