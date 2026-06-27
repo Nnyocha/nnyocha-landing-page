@@ -183,9 +183,17 @@
     margin-bottom: 20px;
   }
 
-  .featuresGrid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .featuresGrid{
+    display: flex;
+    flex-direction: column;
+  }
+  .researchImage{
+    width: 90vw;
+    margin-top: -40%;
   }
 
   .featureCard {

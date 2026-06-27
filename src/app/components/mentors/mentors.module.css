@@ -143,16 +143,19 @@
   .ctaButton {
     padding: 12px 32px;
     font-size: 15px;
-    width: 100%;
+    width: 90vw;
   }
 
   .features {
     max-width: 100%;
+    flex-direction: column;
   }
 
   .featureItem {
-    padding: 18px 0;
+    padding: 1em;
     gap: 16px;
+    width: 90vw;
+    margin: 0 0 3% 5%;
   }
 
   .featureLine {
@@ -191,7 +194,7 @@
   }
 
   .featureItem {
-    padding: 16px 0;
+    padding: 1em;
     gap: 14px;
   }
 
