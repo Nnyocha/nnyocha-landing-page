@@ -154,7 +154,7 @@ export default function HeroSection() {
   };
 
   const handleSpeakToFounder = () => {
-    window.open('mailto:founders@nnyocha.com', '_blank');
+    window.open('https://mail.google.com/mail/?view=cm&to=founders@nnyocha.com', '_blank');
   };
 
   return (

@@ -47,7 +47,7 @@ export default function ForResearcher() {
   };
 
   return (
-    <section className={styles.section} id="researchers">
+    <section className={styles.section} id="researcher">
       <div className={styles.container}>
         <div className={styles.gridContainer}>
           <div className={styles.contentColumn}>
@@ -75,7 +75,9 @@ export default function ForResearcher() {
               ))}
             </div>
           </div>
-         <Image src={Research} alt="" width={700} height={1000} className={styles.researchImage}/>
+          <div className={styles.imageColumn}>
+            <Image src={Research} alt="Researchers collaborating" className={styles.researchImage}  width={700} height={1000}/>
+          </div>
         </div>
       </div>
     </section>

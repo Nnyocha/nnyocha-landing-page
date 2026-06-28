@@ -288,9 +288,85 @@
     padding: 28px 24px;
     max-height: 380px;
   }
+  .ctaButton{
+    width: 50vw;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+    padding: 24px 20px;
+    max-height: 360px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    opacity: 1;
+    pointer-events: all;
+    margin: 0 auto;
+  }
+
+  .card.side {
+    display: none;
+  }
+
+  .card.center {
+    position: relative;
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    left: auto;
+  }
+
+  .carouselContainer {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+
+  .ctaButton {
+    padding: 12px 32px;
+    font-size: 15px;
+    width: 50vw;
+  }
+
+  .rubricItemTitle {
+    font-size: 13px;
+  }
+
+  .rubricItemDesc {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px) {
   .section {
     padding: 48px 0;
   }
