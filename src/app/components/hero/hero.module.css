@@ -249,5 +249,7 @@
     .content{
         top: 15%;
     }
-    
+    .carouselContainer{
+        height: 600px;
+    }
 }

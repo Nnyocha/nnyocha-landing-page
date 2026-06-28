@@ -47,7 +47,7 @@ export default function ForResearcher() {
   };
 
   return (
-    <section className={styles.section} id="researcher">
+    <section className={styles.section} id="researchers">
       <div className={styles.container}>
         <div className={styles.gridContainer}>
           <div className={styles.contentColumn}>

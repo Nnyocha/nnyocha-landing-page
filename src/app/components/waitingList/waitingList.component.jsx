@@ -154,7 +154,7 @@ export default function HeroSection() {
   };
 
   const handleSpeakToFounder = () => {
-    window.open('mailto:founders@nnyocha.com?subject=Inquiry%20about%20Nnyocha&body=Hello%20Nnyocha%20Team%2C%0A%0AI%27m%20interested%20in%20learning%20more%20about%20Nnyocha%20and%20how%20I%20can%20get%20involved.%0A%0ABest%20regards%2C', '_blank');
+    window.open('mailto:founders@nnyocha.com', '_blank');
   };
 
   return (

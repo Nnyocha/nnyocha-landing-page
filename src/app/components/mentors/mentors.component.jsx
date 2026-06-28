@@ -43,7 +43,7 @@ export default function Mentors() {
         <div className={styles.header}>
           <h2 className={styles.title}>
             Share your expertise,<br />
-            shape African research
+             shape African research
           </h2>
           <p className={styles.description}>
             Become part of Africa's most credible research mentorship network. Match with researchers in your field, guide their work, and build a measurable portfolio of impact.

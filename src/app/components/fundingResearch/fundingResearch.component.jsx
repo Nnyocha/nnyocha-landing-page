@@ -24,7 +24,7 @@ export default function FundingResearch() {
 
         <div className={styles.gridContainer}>
           <div className={styles.columnChallenges}>
-            <h3 className={styles.columnTitle}>Why we built Nnyocha (Challenges)</h3>
+            <h3 className={styles.columnTitle}>Why we built Nnyocha</h3>
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <Image src={Risk} alt="a warning sign" className={styles.cardIcon} width={30} height={30}/>
@@ -59,7 +59,7 @@ export default function FundingResearch() {
           </div>
 
           <div className={styles.columnSolutions}>
-            <h3 className={styles.solutionTitle}>How Nnyocha Works (Solution)</h3>
+            <h3 className={styles.solutionTitle}>How Nnyocha Works</h3>
             <div className={styles.card}>
               <div className={styles.cardHeader}>
                 <Image src={Solution} alt="a check mark" className={styles.cardIcon} width={30} height={30}/>

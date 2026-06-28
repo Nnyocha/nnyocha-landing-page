@@ -8,7 +8,7 @@ import styles from "./navbar.module.css";
 
 const navLinks = [
   { label: "Funders", href: "#funders" },
-  { label: "Researcher", href: "#researcher" },
+  { label: "Researchers", href: "#researchers" },
   { label: "Mentors", href: "#mentors" },
   { label: "Contact", href: "#waiting-list" },
 ];
@@ -57,14 +57,14 @@ export default function Navbar() {
             ))}
             <Link 
               href="#waiting-list" 
-              className={styles.registerBtn}
+              className={styles.discoverBtn}
               onClick={(e) => handleTabClick(e, 'Researcher')}
             >
               Register as a researcher
             </Link>
             <Link 
               href="#waiting-list" 
-              className={styles.discoverBtn}
+              className={styles.registerBtn}
               onClick={(e) => handleTabClick(e, 'Funder')}
             >
               Discover Vetted Research
