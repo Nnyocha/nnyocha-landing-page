@@ -18,19 +18,11 @@
   margin-top: 2%;
   border-radius: 30px;
   font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
-  padding: 0;
-  overflow: hidden;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .gridContainer {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
 }
 
 .contentColumn {
@@ -85,7 +77,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 8px;
 }
 
 .featureCard {
@@ -98,10 +89,6 @@
 
 .featureCard:hover {
   background: rgba(255, 255, 255, 0.9);
-}
-
-.featureCard img {
-  margin-bottom: 10px;
 }
 
 .cardTitle {

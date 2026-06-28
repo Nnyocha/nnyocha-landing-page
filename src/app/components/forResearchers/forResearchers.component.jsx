@@ -75,9 +75,7 @@ export default function ForResearcher() {
               ))}
             </div>
           </div>
-          <div className={styles.imageColumn}>
-            <Image src={Research} alt="Researchers collaborating" className={styles.researchImage}  width={700} height={1000}/>
-          </div>
+          <Image src={Research} alt="Researchers collaborating" className={styles.researchImage}  width={700} height={1000}/>
         </div>
       </div>
     </section>
