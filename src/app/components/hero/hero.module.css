@@ -110,7 +110,7 @@
   font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin: 50px 0 16px 0;
   font-family: "Gopher", Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -196,8 +196,8 @@
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -206,7 +206,8 @@
 
 .dotActive {
   background: #ffffff;
-  width: 32px;
+  width: 50px;
+  border-radius: 20px;
 }
 
 .dotInactive {

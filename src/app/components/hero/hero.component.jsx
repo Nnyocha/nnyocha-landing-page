@@ -11,7 +11,7 @@ const slides = [
   {
     id: 1,
     image: Hero1,
-    title: "Invest in Africa's Next Generation of Researchers",
+    title: "Invest in \n Africa's Next \n Generation of \n Researchers",
     subtitle:
       "Nnyocha helps institutional funders discover, evaluate, and support high-potential researchers through a trusted pipeline designed for measurable impact",
     cta: "Discover Vetted Research",
@@ -19,7 +19,7 @@ const slides = [
   {
     id: 2,
     image: Hero2,
-    title: "Invest in Africa's Next Generation of Researchers",
+    title: "Invest in \n Africa's Next \n Generation of \n Researchers",
     subtitle:
       "Nnyocha helps institutional funders discover, evaluate, and support high-potential researchers through a trusted pipeline designed for measurable impact",
     cta: "Discover Vetted Research",
@@ -119,7 +119,7 @@ export default function Hero() {
                         />
                     ))}
                     </div>
-                    <h1 className={styles.title}>{renderTitle(slide.title)}</h1>
+                    <h1 className={styles.title}  style={{ whiteSpace: 'pre-line' }}>{renderTitle(slide.title)}</h1>
                     <p className={styles.subtitle}>{slide.subtitle}</p>
                     <Link 
                         href="#waiting-list" 

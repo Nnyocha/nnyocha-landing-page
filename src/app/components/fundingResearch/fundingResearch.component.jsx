@@ -26,8 +26,10 @@ export default function FundingResearch() {
           <div className={styles.columnChallenges}>
             <h3 className={styles.columnTitle}>Why we built Nnyocha (Challenges)</h3>
             <div className={styles.card}>
-            <Image src={Risk} alt="a warning sign"  className={styles.cardIcon} width={30} height={30}/>
-            <h4 className={styles.cardTitle}>Perceived risk is high</h4>
+              <div className={styles.cardHeader}>
+                <Image src={Risk} alt="a warning sign" className={styles.cardIcon} width={30} height={30}/>
+                <h4 className={styles.cardTitle}>Perceived risk is high</h4>
+              </div>
               <p className={styles.cardText}>
                 Without a structured evaluation framework, it's difficult to distinguish
                 high-potential opportunities from the rest.
@@ -35,8 +37,10 @@ export default function FundingResearch() {
             </div>
 
             <div className={styles.card}>
-            <Image src={Capital} alt="a paper with search icon in the middle"  className={styles.cardIcon} width={30} height={30}/>
-            <h4 className={styles.cardTitle}>High-impact research is hidden from capital.</h4>
+              <div className={styles.cardHeader}>
+                <Image src={Capital} alt="a paper with search icon in the middle" className={styles.cardIcon} width={30} height={30}/>
+                <h4 className={styles.cardTitle}>High-impact research is hidden from capital.</h4>
+              </div>
               <p className={styles.cardText}>
                 Quality African research lives behind university walls, scattered across 54 countries
                 with no central pipeline.
@@ -44,8 +48,10 @@ export default function FundingResearch() {
             </div>
 
             <div className={styles.card}>
-              <Image src={Prove} alt="arrows pointing in 4 directions"  className={styles.cardIcon} width={30} height={30}/>
-              <h4 className={styles.cardTitle}>Impact is hard to prove</h4>
+              <div className={styles.cardHeader}>
+                <Image src={Prove} alt="arrows pointing in 4 directions" className={styles.cardIcon} width={30} height={30}/>
+                <h4 className={styles.cardTitle}>Impact is hard to prove</h4>
+              </div>
               <p className={styles.cardText}>
                 Funding impact lacks clear measurement systems.
               </p>
@@ -55,8 +61,10 @@ export default function FundingResearch() {
           <div className={styles.columnSolutions}>
             <h3 className={styles.solutionTitle}>How Nnyocha Works (Solution)</h3>
             <div className={styles.card}>
-              <Image src={Solution} alt="a check mark"  className={styles.cardIcon} width={30} height={30}/>
-              <h4 className={styles.cardTitle}>Verified Projects</h4>
+              <div className={styles.cardHeader}>
+                <Image src={Solution} alt="a check mark" className={styles.cardIcon} width={30} height={30}/>
+                <h4 className={styles.cardTitle}>Verified Projects</h4>
+              </div>
               <p className={styles.cardText}>
                 Every project is screened against an institutional rubric: research quality, market
                 traction, team strength, and impact thesis.
@@ -64,8 +72,10 @@ export default function FundingResearch() {
             </div>
 
             <div className={styles.card}>
-              <Image src={Selection} alt="a person with a mark sign on the head"  className={styles.cardIcon} width={30} height={30}/>
-              <h4 className={styles.cardTitle}>Mandate-Matched Selection</h4>
+              <div className={styles.cardHeader}>
+                <Image src={Selection} alt="a person with a mark sign on the head" className={styles.cardIcon} width={30} height={30}/>
+                <h4 className={styles.cardTitle}>Mandate-Matched Selection</h4>
+              </div>
               <p className={styles.cardText}>
                 Filter by thesis, geography, ticket size and SDG alignment. Request decks, IP
                 profiles and field-validation data on demand.
@@ -73,8 +83,10 @@ export default function FundingResearch() {
             </div>
 
             <div className={styles.card}>
-              <Image src={Track} alt="a ziz-zag"  className={styles.cardIcon} width={30} height={30}/>
-              <h4 className={styles.cardTitle}>Fund &amp; Track</h4>
+              <div className={styles.cardHeader}>
+                <Image src={Track} alt="a ziz-zag" className={styles.cardIcon} width={30} height={30}/>
+                <h4 className={styles.cardTitle}>Fund &amp; Track</h4>
+              </div>
               <p className={styles.cardText}>
                 Milestone-based release of capital, on-platform progress monitoring, and quarterly
                 impact reports are consistently provided for funders.

@@ -52,7 +52,7 @@ export default function ForResearcher() {
         <div className={styles.gridContainer}>
           <div className={styles.contentColumn}>
             <div className={styles.header}>
-              <h2 className={styles.title}>Your research deserves to be funded</h2>
+              <h2 className={styles.title}>Your research <br/> deserves to be <br /> funded</h2>
               <p className={styles.description}>
                 Nnyocha matches your work to active grant calls, connects you with mentors who review and verify your proposals, and protects your IP at every step. The right funders will find you.
               </p>
