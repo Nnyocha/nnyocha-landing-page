@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '../../components/navbar/navbar.component';
 import { db } from '../../../../firebase';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
+import * as XLSX from 'xlsx';
 import styles from './page.module.css';
 
 export default function WaitlistPage() {
@@ -67,6 +68,55 @@ export default function WaitlistPage() {
     return waitlistData[role]?.length || 0;
   };
 
+  const exportToExcel = () => {
+    const data = getFilteredData();
+    
+    if (data.length === 0) {
+      alert('No data to export');
+      return;
+    }
+
+    // Format data for Excel
+    const excelData = data.map((item, index) => ({
+      '#': index + 1,
+      'Role': item.role.charAt(0).toUpperCase() + item.role.slice(1),
+      'First Name': item.firstName,
+      'Last Name': item.lastName,
+      'Email': item.email,
+      'Organization': item.organization || '-',
+      'Interest': item.interest,
+      'Submitted': new Date(item.submittedAt).toLocaleDateString(),
+      'Status': item.status || 'pending'
+    }));
+
+    // Create workbook
+    const ws = XLSX.utils.json_to_sheet(excelData);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Waitlist');
+
+    // Auto-size columns
+    const colWidths = [
+      { wch: 5 },   // #
+      { wch: 12 },  // Role
+      { wch: 15 },  // First Name
+      { wch: 15 },  // Last Name
+      { wch: 25 },  // Email
+      { wch: 20 },  // Organization
+      { wch: 40 },  // Interest
+      { wch: 15 },  // Submitted
+      { wch: 12 }   // Status
+    ];
+    ws['!cols'] = colWidths;
+
+    // Generate filename with date
+    const date = new Date();
+    const dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    const fileName = `waitlist_${activeTab}_${dateStr}.xlsx`;
+
+    // Download file
+    XLSX.writeFile(wb, fileName);
+  };
+
   if (loading) {
     return <div className={styles.loading}>Loading waitlist data...</div>;
   }
@@ -119,6 +169,24 @@ export default function WaitlistPage() {
           onClick={() => setActiveTab('mentors')}
         >
           Mentors ({getRoleCount('mentors')})
+        </button>
+      </div>
+
+      <div className={styles.tableHeader}>
+        <div className={styles.tableTitle}>
+          <span>Showing {getFilteredData().length} entries</span>
+        </div>
+        <button 
+          className={styles.exportBtn}
+          onClick={exportToExcel}
+          disabled={getFilteredData().length === 0}
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          Export to Excel
         </button>
       </div>
 
