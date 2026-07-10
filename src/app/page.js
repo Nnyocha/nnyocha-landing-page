@@ -1,27 +1,29 @@
 
 import Navbar from "./components/navbar/navbar.component";
-import Hero from "./components/hero/hero.component";
 import FundingResearch from "./components/fundingResearch/fundingResearch.component";
-import ForFunders from "./components/forFunders/forFunders.component";
-import ForResearcher from "./components/forResearchers/forResearchers.component";
-import Mentors from "./components/mentors/mentors.component";
+import Launch from "./components/launch/launch.component";
+import TheProblem from "./components/theProblem/theProblem.component";
 import FAQs from "./components/faqs/faqs.component";
-import JoinSection from "./components/waitingList/waitingList.component";
+import StartFunding from "./components/startFunding/startFunding.component";
 import Footer from "./components/footer/footer.component";
 import FoundersLetter from "./components/foundersLetter/foundersLetter.component";
+import Stakeholder from "./components/stakeholder/stakeholder.component";
+import HowItWorks from "./components/howItWorks/howItWorks";
+import WhyDifferent from "./components/whyDifferent/whyDifferent";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-      <Hero />
       <FundingResearch />
-      <ForFunders />
-      <ForResearcher />
-      <Mentors />
+      <Launch />
+      <TheProblem />
+      <Stakeholder />
+      <HowItWorks />
+      <WhyDifferent />
       <FoundersLetter />
       <FAQs />
-      <JoinSection />
+      <StartFunding />
       <Footer />
     </main>
   );

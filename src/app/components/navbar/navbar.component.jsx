@@ -6,23 +6,10 @@ import Image from "next/image";
 import Logo from '../../../../public/images/Logo.svg'
 import styles from "./navbar.module.css";
 
-const navLinks = [
-  { label: "Funders", href: "#funders" },
-  { label: "Researchers", href: "#researchers" },
-  { label: "Mentors", href: "#mentors" },
-  { label: "Contact", href: "#waiting-list" },
-];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const handleNavClick = (e, href) => {
-    e.preventDefault();
-    const section = document.getElementById(href.replace('#', ''));
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const handleTabClick = (e, tab) => {
     e.preventDefault();
@@ -45,30 +32,50 @@ export default function Navbar() {
           </div>
 
           <div className={styles.desktopNav}>
-            {navLinks.map((link) => (
-              <Link 
-                key={link.label} 
-                href={link.href} 
-                className={styles.navLink}
-                onClick={(e) => handleNavClick(e, link.href)}
-              >
-                {link.label}
-              </Link>
-            ))}
             <Link 
-              href="#waiting-list" 
-              className={styles.discoverBtn}
-              onClick={(e) => handleTabClick(e, 'Researcher')}
+              href="/funders"
+              className={styles.navLink}
             >
-              Register as a researcher
+              Funders
             </Link>
             <Link 
+              href="/researchers"
+              className={styles.navLink}
+            >
+              Researchers
+            </Link>
+            <Link 
+              href="/mentors"
+              className={styles.navLink}
+            >
+              Mentors
+            </Link>
+            <Link 
+              href="/about"
+              className={styles.navLink}
+            >
+              About
+            </Link>
+            <Link 
+              href="https://substack.com/@nnyocha"
+              className={styles.navLink}
+              target="_blank"
+            >
+              Blog
+            </Link>
+            <button 
+              className={styles.waitlistBtn}
+              onClick={(e) => handleTabClick(e, 'Researcher')}
+            >
+              Join Waitlist
+            </button>
+            <button 
               href="#waiting-list" 
               className={styles.registerBtn}
               onClick={(e) => handleTabClick(e, 'Funder')}
             >
-              Discover Vetted Research
-            </Link>
+              Book a call
+            </button>
           </div>
 
           <div className={styles.mobileMenuBtn}>
@@ -88,29 +95,52 @@ export default function Navbar() {
 
       {mobileMenuOpen && (
         <div className={styles.mobileNav}>
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className={styles.mobileNavLink}
-              onClick={(e) => {
-                setMobileMenuOpen(false);
-                handleNavClick(e, link.href);
-              }}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link
-            href="#waiting-list"
+          <Link 
+            href="/funders"
+            className={styles.navLink}
+          >
+            Funders
+          </Link>
+          <Link 
+            href="/researchers"
+            className={styles.navLink}
+          >
+            Researchers
+          </Link>
+          <Link 
+            href="/mentors"
+            className={styles.navLink}
+          >
+            Mentors
+          </Link>
+          <Link 
+            href="/about"
+            className={styles.navLink}
+          >
+            About
+          </Link>
+          <Link 
+            href="https://substack.com/@nnyocha"
+            className={styles.navLink}
+            target="_blank"
+          >
+            Blog
+          </Link>
+          <button 
+            className={styles.waitlistBtn}
+            onClick={(e) => handleTabClick(e, 'Researcher')}
+          >
+            Join Waitlist
+          </button>
+          <button
             className={styles.mobileRegisterBtn}
             onClick={(e) => {
               setMobileMenuOpen(false);
               handleTabClick(e, 'Researcher');
             }}
           >
-            Register as a researcher
-          </Link>
+            Book a Call
+          </button>
         </div>
       )}
     </nav>

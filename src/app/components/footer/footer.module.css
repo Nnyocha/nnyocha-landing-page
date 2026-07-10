@@ -41,6 +41,10 @@
   margin: 0;
 }
 
+.socialIcon {
+  margin-right: 8px;
+}
+
 .rightColumn {
   display: grid;
   grid-template-columns: 1fr 1fr;

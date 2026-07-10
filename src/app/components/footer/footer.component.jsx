@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import Logo from "../../../../public/images/Logo.svg";
+import Instagram from "../../../../public/images/instagram.svg";
+import Twitter from "../../../../public/images/twitter.svg";
+import LinkedIn from "../../../../public/images/linkedin.svg";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -37,10 +40,13 @@ export default function Footer() {
           <div className={styles.leftColumn}>
             <Image src={Logo} alt="Nyocha logo" className={styles.logo} />
             <address className={styles.address}>
-              66 Wellington Street West, Suite 4100
-              <br />
-              Toronto, ON M5K 1B7
+              66 Wellington Street West, Suite 4100 Toronto, ON M5K 1B7
             </address>
+            <div className={styles.socialLinks}>
+              <Image src={Instagram} alt="Instagram" className={styles.socialIcon} />
+              <Image src={LinkedIn} alt="LinkedIn" className={styles.socialIcon} />
+              <Image src={Twitter} alt="Twitter" className={styles.socialIcon} />
+            </div>
           </div>
 
           <div className={styles.rightColumn}>

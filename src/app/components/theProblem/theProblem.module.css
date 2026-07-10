@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'OakSans';
+  src: url('../../../../public/fonts/OakSans-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gopher';
+  src: url('../../../../public/fonts/Gopher-Regular.woff2') format('woff2'),
+       url('../../../../public/fonts/Gopher-Regular.woff') format('woff'),
+       url('../../../../public/fonts/Gopher-Regular.ttf') format('truetype');
+  font-display: swap; 
+}
+
+.section {
+  background: #fdf1e6;
+  margin: 0 auto;
+  border-radius: 30px;
+  padding: 2em;
+  line-height: 1.47;
+  width: 45vw;
+  font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+}
+.card {
+  padding: 1em;
+  background: #ffffff;
+  margin-right: 2%;
+  border-radius: 5px;
+}
