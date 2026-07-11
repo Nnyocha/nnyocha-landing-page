@@ -12,6 +12,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.hero-image {
+  margin-left: 2%;
+}
 
 @media (max-width: 768px) {
   body{

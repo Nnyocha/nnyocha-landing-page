@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'OakSans';
+  src: url('../../../../public/fonts/OakSans-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gopher';
+  src: url('../../../../public/fonts/Gopher-Regular.woff2') format('woff2'),
+       url('../../../../public/fonts/Gopher-Regular.woff') format('woff'),
+       url('../../../../public/fonts/Gopher-Regular.ttf') format('truetype');
+  font-display: swap; 
+}
+
+.section {
+  padding: 1em;
+  text-align: center;
+  margin-top: 2%;
+  font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+  font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: left;
+  padding: 24px 22px;
+  border-radius: 14px;
+  transition: background 0.2s ease;
+}
+
+.card:hover {
+  background: #fafafa;
+}
+
+.cardIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #fdecdc;
+  color: #e8871e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-family: 'OakSans', Georgia, serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 6px;
+}
+
+.cardText {
+  font-size: 13.5px;
+  color: #8a8a8a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
