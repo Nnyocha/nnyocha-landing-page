@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'OakSans';
+  src: url('../../../../public/fonts/OakSans-Regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gopher';
+  src: url('../../../../public/fonts/Gopher-Regular.woff2') format('woff2'),
+       url('../../../../public/fonts/Gopher-Regular.woff') format('woff'),
+       url('../../../../public/fonts/Gopher-Regular.ttf') format('truetype');
+  font-display: swap; 
+}
+
+.section {
+  padding: 80px 0;
+  background: #ffffff;
+  text-align: center;
+  line-height: 1.47;
+  font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+  font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
+}
+
+.stepGroup {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.step{
+    background: #eeebeb;
+    padding: 1em;
+}
+
+.stepOne {
+    border-top-left-radius: 32px;
+}
+
+.stepTwo {
+    border-top-right-radius: 32px;
+    margin-left: 1%;
+}
+
+.stepThree {
+    border-bottom-left-radius: 32px;
+    margin-top: 1%;
+}
+
+.stepFour {
+    border-bottom-right-radius: 32px;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+.stepTop {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+.stepNumber {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+  background: #452c15;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 14px;
+  margin-right: 1em;
+}
