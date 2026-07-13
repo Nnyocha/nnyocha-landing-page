@@ -9,40 +9,28 @@ export default function FAQs() {
   const faqs = [
     {
       question: "What is Nnyocha",
-      answer: "Nnyocha is a deal flow platform built to help discover, evaluate, and connect high-potential African research projects with the capital, mentorship, and opportunities needed to create measurable impact. It helps bridge the gap between promising research and the institutions that can support it."
+      answer: "Nnyocha is a research infrastructure platform that connects African researchers, funders, and mentors through a trusted, structured ecosystem. We make it easier for high-quality research to get discovered, evaluated, and funded."
     },
     {
-      question: "Who is Nnyocha for?",
-      answer: "Nnyocha is built for researchers, institutional funders, impact investors, foundations, development partners, and organizations looking to discover and support impactful research across Africa."
+      question: "Who can join?",
+      answer: "Nnyocha is open to African researchers at any career stage, institutional and individual funders, experienced mentors, and organisational partners. If you're part of the research ecosystem, there's a place for you here."
     },
     {
-      question: "How does Nnyocha help researchers?",
-      answer: "Nnyocha helps researchers gain visibility, access funding opportunities, connect with mentors, and receive support that helps move promising research from ideas into impactful solutions."
+      question: "How are projects evaluated?",
+      answer: "Every project submitted to Nnyocha goes through a structured review covering research quality, methodology, impact potential, and fundability. Projects that pass receive a brief matched to relevant funders. Those that don't receive written feedback."
     },
     {
-      question: "How does Nnyocha help funders?",
-      answer: "Nnyocha gives funders access to a trusted pipeline of evaluated research opportunities, helping them discover promising talent, reduce funding risk, and deploy capital toward measurable outcomes."
-    },
-    {
-      question: "How are research projects evaluated?",
-      answer: "Research projects are assessed using a structured evaluation framework that considers factors such as research quality, impact potential, feasibility, relevance, and scalability. This helps create a clearer and more transparent funding decision process."
-    },
-    {
-      question: "Can organizations partner with Nnyocha?",
-      answer: "Yes. Organizations can partner with Nnyocha to support research programs, provide funding, offer mentorship, collaborate on initiatives, or access a pipeline of emerging African research talent."
+      question: "How do funders participate?",
+      answer: "Funders set their mandate and receive a curated pipeline of pre-vetted research opportunities. Capital is deployed through a milestone-based escrow process, with structured reporting at every stage."
     },
     {
       question: "How is intellectual property protected?",
-      answer: "Nnyocha recognizes the importance of protecting researchers’ ideas and innovations. Intellectual property ownership remains guided by agreements between researchers, institutions, and funding partners, with confidentiality and protection measures applied where required"
+      answer: "Researchers retain full IP ownership. Nnyocha does not claim rights over any submitted or funded research. All commercialisation terms are agreed directly between researcher and funder."
     },
     {
-      question: "How are funds escrowed and disbursed?",
-      answer: "Funds are managed through a structured process designed to ensure accountability and transparency. Capital is released based on agreed milestones, project requirements, and verification processes between relevant stakeholders."
+      question: "Can organizations partner with Nnyocha?",
+      answer: "Yes. We work with universities, research institutes, funding consortia, and development organisations. Contact us at hello@nnyocha.com to explore what a partnership could look like."
     },
-    {
-      question: "How do I join Nnyocha?",
-      answer: "Researchers, funders, mentors, and partners can join by registering interest through Nnyocha’s platform. Once onboarded, users can access the relevant opportunities, networks, and resources available to them."
-    }
   ];
 
   const toggleFAQ = (index) => {

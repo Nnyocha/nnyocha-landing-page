@@ -17,7 +17,7 @@
   display: flex;
   min-height: 50vh;
   flex-direction: row;
-  background: url('../../../../public/images/waiting-list.svg') center/cover no-repeat;
+  background: url('../../../../public/images/waiting-list.webp') center/cover no-repeat;
   color: #fff;
   border-radius: 30px;
   margin-top: 2%;

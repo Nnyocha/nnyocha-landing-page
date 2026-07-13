@@ -44,3 +44,15 @@
 .cardTitle, .cardText {
     padding-left: 1.5em;
 }
+
+@media (max-width: 767px) {
+    .flex {
+        flex-direction: column;
+    }
+    .cardImage {
+        width: 98vw;
+    }
+    .cardTitle, .cardText {
+        padding-left: 2em;
+    }
+}

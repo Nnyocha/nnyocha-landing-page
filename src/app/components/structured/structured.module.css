@@ -77,3 +77,22 @@
   padding: 10px 14px;
   margin-right: 1em;
 }
+
+.stepTwo .stepImage,
+.stepThree .stepImage,
+.stepFour .stepImage {
+    margin-top: 4%;
+}
+
+@media (max-width: 767px) {
+    .stepGroup {
+        flex-direction: column;
+    }
+    .stepImage {
+        width: 95vw;
+        height: 40vh;
+    }
+    .stepOne, .stepTwo, .stepThree, .stepFour {
+        margin: 1%;
+    }
+}

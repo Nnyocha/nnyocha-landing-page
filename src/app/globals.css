@@ -20,4 +20,8 @@ a {
   body{
     margin: 0;
   }
+  .hero-image {
+    width: 95vw;
+    height: 40vh;
+  }
 }

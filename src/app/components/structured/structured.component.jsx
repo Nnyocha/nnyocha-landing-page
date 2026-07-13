@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Expertise from "../../../../public/images/create.svg";
-import Researchers from "../../../../public/images/researchers-card.svg";
-import Engagement from "../../../../public/images/engagement-card.svg";
-import Impact from "../../../../public/images/impact-card.svg";
+import Researchers from "../../../../public/images/researchers-card.webp";
+import Engagement from "../../../../public/images/engagement-card.webp";
+import Impact from "../../../../public/images/impact-card.webp";
 import styles from "./structured.module.css";
 
 export default function Structured() {
@@ -27,7 +27,7 @@ export default function Structured() {
                             <h3 className={styles.stepTitle}>
                             Get matched with researchers whose work <br /> aligns with your background.</h3>
                         </div>
-                        <Image src={Researchers} alt="Researchers" width={500} height={370} className={styles.stepImage} />
+                        <Image src={Researchers} alt="Researchers" width={500} height={330} className={styles.stepImage} />
                     </div>
                 </div>
                 <div className={styles.stepGroup}>

@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image";
-import Impact from "../../../../public/images/multiply.svg";
+import Impact from "../../../../public/images/multiply.webp";
 import Expertise from "../../../../public/images/expertise.svg";
-import Legacy from "../../../../public/images/legacy.svg";
+import Legacy from "../../../../public/images/legacy.webp";
 import Network from "../../../../public/images/expand.svg";
 import styles from './withPurpose.module.css';
 

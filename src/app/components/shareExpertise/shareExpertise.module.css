@@ -62,3 +62,13 @@
 .detailImage{
   margin-right: 3%;
 }
+
+@media (max-width: 767px) {
+  .section {
+    flex-direction: column;
+  }
+  .right{
+    margin-top: 5%;
+    margin-left: 2%;
+  }
+}

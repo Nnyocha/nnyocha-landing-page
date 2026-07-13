@@ -42,3 +42,12 @@
   margin-right: 2%;
   border-radius: 5px;
 }
+
+@media (max-width: 767px) {
+  .section {
+    width: 90vw;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}

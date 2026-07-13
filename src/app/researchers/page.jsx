@@ -10,6 +10,7 @@ import Solved from "../components/solved/solved.component";
 import FAQs from "../components/faqs/faqs.component";
 import Footer from "../components/footer/footer.component";
 import Waitlist from "../components/waitlist/waitlist.component";
+import SupportedPath from "../components/supportedPath/supportedPath.component";
 
 export default function Researchers() {
   return (
@@ -20,6 +21,7 @@ export default function Researchers() {
       <Launch />
       <WhyResearchers />
       <Solved />
+      <SupportedPath />
       <FAQs />
       <Waitlist />
       <Footer />

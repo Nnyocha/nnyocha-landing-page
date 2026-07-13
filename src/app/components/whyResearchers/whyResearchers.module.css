@@ -49,3 +49,16 @@
 .cardImage{
     margin-top: -10%;
 }
+
+@media (max-width: 767px) {
+    .cardGroup {
+        flex-direction: column;
+    }
+    .card {
+        width: 95vw;
+    }
+    .cardImage {
+        height: 40vh;
+        width: 95vw;
+    }
+}

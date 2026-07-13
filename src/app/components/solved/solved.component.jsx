@@ -64,6 +64,7 @@ export default function Solved () {
                 </div>
                 ))}
             </div>
+            <button className={styles.researcherBtn}>Join as a Researcher</button>
         </section>
     )
 }
