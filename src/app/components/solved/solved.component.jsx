@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Matched from "../../../../public/images/matched.svg";
 import RealVisibility from "../../../../public/images/real-visibility.svg";
 import Mentorship from "../../../../public/images/mentorship.svg";
@@ -64,7 +65,13 @@ export default function Solved () {
                 </div>
                 ))}
             </div>
+            <Link 
+              href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
             <button className={styles.researcherBtn}>Join as a Researcher</button>
+            </Link>
         </section>
     )
 }

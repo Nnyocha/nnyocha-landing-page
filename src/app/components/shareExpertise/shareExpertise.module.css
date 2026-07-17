@@ -45,6 +45,8 @@
   font-weight: 500;
   margin-top: 3%;
   transition: background 0.2s;
+  cursor: pointer;
+  width: 15vw;
 }
 
 .right {

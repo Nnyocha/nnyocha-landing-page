@@ -8,7 +8,6 @@ export default function CredibleResearch() {
             <h1 className={styles.title}>Find credible research. <br /> Fund with confidence.</h1>
             <p>We help funders discover credible research, make informed funding decisions, <br /> 
             and track the impact of every investment.</p>
-            <button className={styles.registerBtn}> Speak to a Funder</button>
         </section>
     )
 }

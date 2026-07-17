@@ -11,16 +11,6 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 
-  const handleTabClick = (e, tab) => {
-    e.preventDefault();
-    const section = document.getElementById('waiting-list');
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      sessionStorage.setItem('selectedRole', tab);
-      window.dispatchEvent(new CustomEvent('roleChange', { detail: tab }));
-    }
-  };
-
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
@@ -60,22 +50,28 @@ export default function Navbar() {
               href="https://substack.com/@nnyocha"
               className={styles.navLink}
               target="_blank"
+              rel="noreferrer noopener"
             >
               Blog
             </Link>
-            <button 
-              className={styles.waitlistBtn}
-              onClick={(e) => handleTabClick(e, 'Researcher')}
+            <Link 
+              href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
+              target="_blank"
+              rel="noreferrer noopener"
             >
+            <button className={styles.waitlistBtn}>
               Join Waitlist
             </button>
-            <button 
-              href="#waiting-list" 
-              className={styles.registerBtn}
-              onClick={(e) => handleTabClick(e, 'Funder')}
+            </Link>
+            <Link 
+             href="https://cal.com/nnyocha/introductory-call"
+             target="_blank"
+             rel="noreferrer noopener"
             >
+            <button className={styles.registerBtn}>
               Book a call
             </button>
+            </Link>
           </div>
 
           <div className={styles.mobileMenuBtn}>
@@ -123,24 +119,30 @@ export default function Navbar() {
             href="https://substack.com/@nnyocha"
             className={styles.navLink}
             target="_blank"
+            rel="noreferrer noopener"
           >
             Blog
           </Link>
-          <button 
-            className={styles.waitlistBtn}
-            onClick={(e) => handleTabClick(e, 'Researcher')}
+          <Link 
+           href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
+           target="_blank"
+            rel="noreferrer noopener"
           >
+          <button className={styles.waitlistBtn}>
             Join Waitlist
           </button>
+          </Link>
+          <Link 
+            href="https://cal.com/nnyocha/introductory-call"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
           <button
             className={styles.mobileRegisterBtn}
-            onClick={(e) => {
-              setMobileMenuOpen(false);
-              handleTabClick(e, 'Researcher');
-            }}
           >
             Book a Call
           </button>
+          </Link>
         </div>
       )}
     </nav>

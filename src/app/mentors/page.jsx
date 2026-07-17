@@ -11,7 +11,7 @@ import Mentor from "../components/mentor/mentor.component";
 import Structured from "../components/structured/structured.component";
 import FAQs from "../components/faqs/faqs.component";
 import Footer from "../components/footer/footer.component";
-import MentorWaitlist from "../components/mentorWaitlist/mentorWaitlist.compnent";
+import StartFunding from "../components/startFunding/startFunding.component";
 
 export default function Mentors () {
     return(
@@ -25,7 +25,7 @@ export default function Mentors () {
             <Mentor />
             <Structured />
             <FAQs />
-            <MentorWaitlist />
+            <StartFunding />
             <Footer />
         </main>
     )

@@ -39,4 +39,6 @@
   font-weight: 500;
   margin-top: 3%;
   transition: background 0.2s;
+  width: 15vw;
+  cursor: pointer;
 }

@@ -9,8 +9,8 @@ import WhyResearchers from "../components/whyResearchers/whyResearchers.componen
 import Solved from "../components/solved/solved.component";
 import FAQs from "../components/faqs/faqs.component";
 import Footer from "../components/footer/footer.component";
-import Waitlist from "../components/waitlist/waitlist.component";
 import SupportedPath from "../components/supportedPath/supportedPath.component";
+import StartFunding from "../components/startFunding/startFunding.component";
 
 export default function Researchers() {
   return (
@@ -23,7 +23,7 @@ export default function Researchers() {
       <Solved />
       <SupportedPath />
       <FAQs />
-      <Waitlist />
+      <StartFunding />
       <Footer />
     </main>
   )

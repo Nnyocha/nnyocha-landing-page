@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Clipboard from "../../../../public/images/clipboard.svg";
 import Settings from "../../../../public/images/settings.svg";
 import Support from "../../../../public/images/funding-ready.svg";
@@ -17,7 +18,13 @@ export default function ShareExpertise () {
             <div className={styles.left}>
                 <h2 className={styles.title}>Share your <br /> expertise through <br />structured <br/> 
                 mentorship  <br />designed to create <br />lasting impact.</h2>
+                <Link 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
+                target="_blank"
+                rel="noreferrer noopener"
+                >
                 <button className={styles.mentorBtn}>Become a Mentor</button>
+                </Link>
             </div>
             <div className={styles.right}>
                 <div className={styles.detail}>

@@ -175,21 +175,8 @@
   margin-bottom: 12px;
 }
 
-.cta_funder { background: #e8871e; }
 .cta_researcher { background: #5ea836; }
 .cta_mentors { background: #4a2e1f; }
-
-.learnMore {
-  display: block;
-  width: 100%;
-  text-align: center;
-  background: none;
-  border: none;
-  font-size: 13.5px;
-  color: #555;
-  text-decoration: underline;
-  cursor: pointer;
-}
 
 @media (max-width: 768px) {
   .cardsRow {

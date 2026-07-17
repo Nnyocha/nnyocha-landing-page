@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import PartLogo from "../../../../public/images/part-logo.svg";
 import Funder from "../../../../public/images/funder.svg";
 import Researcher from "../../../../public/images/researcher.svg";
@@ -22,8 +23,6 @@ const stakeholderData = [
       "Research matching",
       "Portfolio insights",
     ],
-    cta: "Speak to a Founder",
-    accent: "funder",
     icon: Funder,
   },
   {
@@ -89,10 +88,17 @@ export default function Stakeholder() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <button className={`${styles.cardCta} ${styles[`cta_${s.accent}`]}`}>
-                {s.cta}
-              </button>
-              <button className={styles.learnMore}>Learn More</button>
+              {s.cta && (
+                <Link 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <button className={`${styles.cardCta} ${styles[`cta_${s.accent}`]}`}>
+                    {s.cta}
+                  </button>
+                </Link>
+              )}
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../../../../public/images/Logo.svg";
 import Instagram from "../../../../public/images/instagram.svg";
 import Twitter from "../../../../public/images/twitter.svg";
@@ -43,9 +44,26 @@ export default function Footer() {
               66 Wellington Street West, Suite 4100 Toronto, ON M5K 1B7
             </address>
             <div className={styles.socialLinks}>
-              <Image src={Instagram} alt="Instagram" className={styles.socialIcon} />
-              <Image src={LinkedIn} alt="LinkedIn" className={styles.socialIcon} />
-              <Image src={Twitter} alt="Twitter" className={styles.socialIcon} />
+              <Link 
+                href="https://www.instagram.com/nnyocha_hub"
+                target="_blank"
+                rel="noreferrer noopener">
+                  <Image src={Instagram} alt="Instagram" className={styles.socialIcon} />
+              </Link>
+              <Link 
+                href="https://www.linkedin.com/company/nnyocha/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Image src={LinkedIn} alt="LinkedIn" className={styles.socialIcon} />
+              </Link>
+              <Link 
+                href="https://x.com/nnyocha_hub"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <Image src={Twitter} alt="Twitter" className={styles.socialIcon} />
+              </Link>
             </div>
           </div>
 

@@ -29,14 +29,3 @@
   letter-spacing: -0.02em;
   font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
 }
-
-.registerBtn {
-  background: #e76f00;
-  color: #ffffff;
-  padding: 1em;
-  border: none;
-  border-radius: 6px;
-  font-weight: 500;
-  margin-top: 3%;
-  transition: background 0.2s;
-}
