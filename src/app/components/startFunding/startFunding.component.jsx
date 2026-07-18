@@ -11,7 +11,7 @@ export default function startFunding() {
         <div className={styles.overlay} />
 
         <div className={styles.heroContent}>
-          <h1>Start funding Africa's next <br /> research breakthrough.</h1>
+          <h1>Start funding Africa&apos;s next <br /> research breakthrough.</h1>
 
           <p>
             Join institutions already using Nnyocha to discover credible <br /> 
