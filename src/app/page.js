@@ -10,12 +10,14 @@ import FoundersLetter from "./components/foundersLetter/foundersLetter.component
 import Stakeholder from "./components/stakeholder/stakeholder.component";
 import HowItWorks from "./components/howItWorks/howItWorks.component";
 import WhyDifferent from "./components/whyDifferent/whyDifferent.component";
+import Carousel from "./components/carousel/carousel.component";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <FundingResearch />
+      <Carousel />
       <Launch />
       <TheProblem />
       <Stakeholder />

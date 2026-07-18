@@ -1,0 +1,30 @@
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.track {
+  display: flex;
+  gap: 12px;
+  width: 172%;
+}
+
+.image {
+  flex: 0 0 calc(25% - 9px);
+  width: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .track {
+    width: 220%; /* fewer full images fit on narrow screens, so widen the peek */
+  }
+
+  .image {
+    height: 220px;
+  }
+}
