@@ -91,6 +91,9 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .researcherBtn {
+    width: 40vw;
+  }
 }
 
 @media (max-width: 560px) {

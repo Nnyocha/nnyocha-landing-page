@@ -42,3 +42,9 @@
   cursor: pointer;
   width: 15vw;
 }
+
+@media(max-width: 767px) {
+  .researcherBtn{
+    width: 40vw;
+  }
+}

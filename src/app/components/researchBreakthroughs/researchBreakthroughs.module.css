@@ -42,3 +42,9 @@
   width: 15vw;
   cursor: pointer;
 }
+
+@media(max-width: 767px) {
+  .mentorBtn{
+    width: 40vw;
+  }
+}
