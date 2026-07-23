@@ -13,7 +13,7 @@
 }
 
 .section {
-  padding: 1em;
+  padding: 40px 0;
   background: #ffffff;
   display: flex;
   justify-content: center;
@@ -22,8 +22,9 @@
   font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
 }
 
-.left {
-  margin-top: 5%;
+.sub {
+    color: #989898;
+
 }
 
 .title {
@@ -31,7 +32,7 @@
   font-weight: 700;
   color: #111827;
   line-height: 1.15;
-  margin-bottom: 20px;
+  margin: 20px 0;
   letter-spacing: -0.02em;
   font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
 }

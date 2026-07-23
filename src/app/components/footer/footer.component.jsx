@@ -11,29 +11,6 @@ import styles from "./footer.module.css";
 export default function Footer() {
     const year = new Date().getFullYear();
 
-  const handleNavClick = (e, targetId, tab) => {
-    e.preventDefault();
-    
-    if (targetId === 'top') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      return;
-    }
-
-    if (tab) {
-      const section = document.getElementById(targetId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-        sessionStorage.setItem('selectedRole', tab);
-        window.dispatchEvent(new CustomEvent('roleChange', { detail: tab }));
-      }
-    } else {
-      const section = document.getElementById(targetId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
-
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
@@ -69,17 +46,15 @@ export default function Footer() {
 
           <div className={styles.rightColumn}>
             <div className={styles.navGroup}>
-              <a 
-                href="#top" 
+              <Link 
+                href="/" 
                 className={styles.navLink}
-                onClick={(e) => handleNavClick(e, 'top')}
               >
                 Home
-              </a>
+              </Link>
               <a 
-                href="#funders" 
+                href="/about" 
                 className={styles.navLink}
-                onClick={(e) => handleNavClick(e, 'funders')}
               >
                 About
               </a>
@@ -92,29 +67,28 @@ export default function Footer() {
             </div>
             <div className={styles.navGroup}>
               <a 
-                href="#waiting-list" 
+                href="/funders" 
                 className={styles.navLink}
-                onClick={(e) => handleNavClick(e, 'waiting-list', 'Funder')}
               >
                 Funders
               </a>
               <a 
-                href="#waiting-list" 
+                href="/mentors" 
                 className={styles.navLink}
-                onClick={(e) => handleNavClick(e, 'waiting-list', 'Mentor')}
               >
                 Mentors
               </a>
               <a 
-                href="#waiting-list" 
+                href="/researchers" 
                 className={styles.navLink}
-                onClick={(e) => handleNavClick(e, 'waiting-list', 'Researcher')}
               >
                 Researchers
               </a>
             </div>
           </div>
         </div>
+
+        <hr />
 
         <div className={styles.bottomBar}>
           <span className={styles.copyright}>

@@ -39,6 +39,7 @@ export default function SupportedPath () {
 
     return (
         <section className={styles.section}>
+            <sub className={styles.sub}>How It Works</sub>
             <h2 className={styles.title}>From profile to funded, a <br /> clear, supported path</h2>
 
             <div className={styles.content}>

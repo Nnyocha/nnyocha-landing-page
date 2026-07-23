@@ -13,11 +13,10 @@
 }
 
 .section {
-  padding: 80px 0;
+  padding: 40px 0;
   background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
   line-height: 1.47;
   font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
 }
@@ -27,13 +26,17 @@
     margin-bottom: 2%;
 }
 
- .hr {
+.upper {
+    padding: 1em;
+}
+
+.hr {
     border: 1px solid #e6e6e6;
 }
 
 .lower {
     display: flex;
-    padding: 1em;
+    padding-top: 1.5em;
 }
 
 .mission, .vision {

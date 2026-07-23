@@ -15,12 +15,13 @@
 .hero {
   position: relative;
   display: flex;
-  min-height: 50vh;
+  min-height: 100vh;
+  max-width: 1000px;
   flex-direction: row;
   background: url('../../../../public/images/waiting-list.webp') center/cover no-repeat;
   color: #fff;
   border-radius: 30px;
-  margin-top: 2%;
+  margin: 0 auto;
   align-items: stretch;
   font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
 }
@@ -29,12 +30,6 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.75) 30%,
-    rgba(0, 0, 0, 0.4) 60%,
-    rgba(0, 0, 0, 0.2) 100%
-  );
   z-index: 0;
   border-radius: 30px;
 }
@@ -50,7 +45,7 @@
 }
 
 .heroContent {
-  padding-bottom: 70px;
+  padding-bottom: 30px;
 }
 
 .heroContent h2 {

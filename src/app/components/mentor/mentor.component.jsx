@@ -10,6 +10,7 @@ import styles from "./mentor.module.css";
 export default function Mentor () {
     return(
         <section className={styles.section}>
+            <sub className={styles.sub}>Who We're Looking For</sub>
             <h2 className={styles.title}>Who can mentor</h2>
             <div className={styles.images}>
                 <Image src={Experience} alt="experience" width={200} height={300} className={styles.image} />

@@ -10,6 +10,7 @@ import styles from "./structured.module.css";
 export default function Structured() {
     return (
         <section className={styles.section}>
+            <sub className={styles.sub}>How It Works</sub>
             <h2 className={styles.title}>Structured from the <br /> start, so you can focus <br /> on what  matters.</h2>
             <div className={styles.steps}>
                 <div className={styles.stepGroup}>

@@ -13,7 +13,7 @@
 }
 
 .section {
-  padding: 80px 0;
+  padding: 40px 0;
   background: #ffffff;
   text-align: center;
   line-height: 1.47;
@@ -28,4 +28,17 @@
   margin-bottom: 20px;
   letter-spacing: -0.02em;
   font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
+}
+
+.registerBtn {
+  background: #e76f00;
+  color: #ffffff;
+  padding: 1em;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 2%;
+  transition: background 0.2s;
+  width: 12vw;
+  cursor: pointer;
 }

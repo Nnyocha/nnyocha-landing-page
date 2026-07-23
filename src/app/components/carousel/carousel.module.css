@@ -1,30 +1,72 @@
 .carousel {
-  overflow: hidden;
+  position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 3%;
+}
+
+.carouselContainer {
+  overflow: hidden;
 }
 
 .track {
   display: flex;
-  gap: 12px;
-  width: 172%;
 }
 
-.image {
-  flex: 0 0 calc(25% - 9px);
-  width: auto;
-  object-fit: cover;
-  border-radius: 12px;
+.slide {
+  min-width: 100%;
+  height: 700px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-@media (max-width: 768px) {
-  .track {
-    width: 220%; /* fewer full images fit on narrow screens, so widen the peek */
-  }
 
-  .image {
-    height: 220px;
-  }
+.slide img {
+  width: 100%;
+  border-radius: 24px;
+  padding: 1em;
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.active {
+  background: #e76f00;
+  width: 18px;
+  border-radius: 10px;
 }

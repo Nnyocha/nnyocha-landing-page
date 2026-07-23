@@ -23,6 +23,10 @@ const stakeholderData = [
       "Research matching",
       "Portfolio insights",
     ],
+    cta: "Book a Call",
+    ctaLink: "/funders#book-a-call",
+    learnMoreLink: "/funders",
+    accent: "funders",
     icon: Funder,
   },
   {
@@ -38,7 +42,9 @@ const stakeholderData = [
       "Research community",
     ],
     cta: "Submit a Research",
-    accent: "researcher",
+    ctaLink: "/researchers#waitlist",
+    learnMoreLink: "/researchers",
+    accent: "researchers",
     icon: Researcher,
   },
   {
@@ -55,6 +61,8 @@ const stakeholderData = [
       "Share industry insights",
     ],
     cta: "Become a Mentor",
+    ctaLink: "/mentors#mentor-waitlist",
+    learnMoreLink: "/mentors",
     accent: "mentors",
     icon: Mentor,
   },
@@ -64,6 +72,7 @@ export default function Stakeholder() {
 
   return (
     <section className={styles.section}>
+      <sub className={styles.sub}>How we solved the gap</sub>
       <h2 className={styles.title}>One Platform for <br />every stakeholder </h2>
       <p>Researchers struggle to find funding. Funders struggle to find credible research. Nnyocha  <br />
       connects them through a trusted platform built for discovery, funding, and measurable impact.</p>
@@ -88,17 +97,23 @@ export default function Stakeholder() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              {s.cta && (
+              <div className={styles.cardActions}>
+                {s.cta && (
+                  <Link 
+                    href={s.ctaLink}
+                  >
+                    <button className={`${styles.cardCta} ${styles[`cta_${s.accent}`]}`}>
+                      {s.cta}
+                    </button>
+                  </Link>
+                )}
                 <Link 
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
-                  target="_blank"
-                  rel="noreferrer noopener"
+                  href={s.learnMoreLink}
+                  className={styles.learnMoreLink}
                 >
-                  <button className={`${styles.cardCta} ${styles[`cta_${s.accent}`]}`}>
-                    {s.cta}
-                  </button>
+                  Learn More
                 </Link>
-              )}
+              </div>
             </div>
           ))}
         </div>

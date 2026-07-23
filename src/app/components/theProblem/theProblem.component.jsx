@@ -7,6 +7,7 @@ export default function TheProblem() {
 
   return (
     <section className={styles.section}>
+      <sub className={styles.sub}>The Problem</sub>
       <h2 className={styles.title}>Research and <br /> funding rarely meet</h2>
       <div className={styles.cards}>
         <div className={`${styles.card} ${styles.cardLeft}`}>
@@ -21,7 +22,7 @@ export default function TheProblem() {
           find, evaluate, and compare <br />credible research opportunities.</p>
         </div>
       </div>
-      {/* <div className={styles.gapIndicator}>
+      <div className={styles.gapIndicator}>
         <svg
           className={styles.gapArrow}
           width="16"
@@ -39,7 +40,7 @@ export default function TheProblem() {
           />
         </svg>
         <span className={styles.gapLabel}>The gap</span>
-      </div> */}
+      </div>
     </section>
   );
 }

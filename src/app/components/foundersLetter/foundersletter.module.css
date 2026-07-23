@@ -2,10 +2,25 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 1em;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.blurBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65vw;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
 }
 
 .founderImage {
+  position: relative;
+  z-index: 1;
   width: 40vw;
   height: auto;
   display: block;
@@ -13,6 +28,7 @@
 
 .letterContent {
   position: absolute;
+  z-index: 2;
   top: 18%;
   left: 60%;
   width: 46%;
@@ -30,13 +46,13 @@
 
 .letterText {
   font-family: 'OakSans', Georgia, serif;
-  font-size: 13px;
+  font-size: 18px;
   line-height: 1.6;
   color: #3a2f24;
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .letterContent {
     width: 70%;
     top: 16%;
@@ -52,5 +68,9 @@
   }
   .founderImage{
     width: 80vw;
+  }
+
+  .blurBackground {
+    width: 100vw;
   }
 }

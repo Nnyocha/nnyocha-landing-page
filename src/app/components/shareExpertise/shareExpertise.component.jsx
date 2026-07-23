@@ -16,13 +16,10 @@ export default function ShareExpertise () {
     return(
         <section className={styles.section}>
             <div className={styles.left}>
+                <sub className={styles.sub}>What Mentors Do</sub>
                 <h2 className={styles.title}>Share your <br /> expertise through <br />structured <br/> 
                 mentorship  <br />designed to create <br />lasting impact.</h2>
-                <Link 
-                href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
-                target="_blank"
-                rel="noreferrer noopener"
-                >
+                <Link href="#mentor-waitlist">
                 <button className={styles.mentorBtn}>Become a Mentor</button>
                 </Link>
             </div>

@@ -9,6 +9,7 @@ import styles from "./coreBenefits.module.css";
 export default function Core() {
   return (
     <section className={styles.section}>
+        <sub className={styles.sub}>Core Benefits</sub>
         <h2 className={styles.title}>Nnyocha is the best fit<br /> for every funder</h2>
         <p className={styles.text}>A premium funder-matching platform built for clarity, confidence, and measurable impact.</p>
         <div className={styles.flex}>

@@ -16,13 +16,12 @@
   position: relative;
   display: flex;
   min-height: 40vh;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1100px;
   flex-direction: row;
   background: url('../../../../public/images/waiting-list.svg') center/cover no-repeat;
   color: #fff;
-  border-radius: 20px;
-  margin-top: 2%;
+  border-radius: 30px;
+  margin: 0 auto;
   align-items: stretch;
   font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
 }
@@ -38,7 +37,7 @@
     rgba(0, 0, 0, 0.2) 100%
   );
   z-index: 0;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 .heroLeft {
@@ -49,6 +48,10 @@
   padding: 64px;
   z-index: 1;
   bottom: 5%;
+}
+
+.heroContent {
+  padding-bottom: 70px;
 }
 
 .heroContent h1 {
@@ -66,6 +69,19 @@
   line-height: 1.5;
 }
 
+.registerBtn {
+  background: #e76f00;
+  color: #ffffff;
+  padding: 1em;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 3%;
+  transition: background 0.2s;
+  width: 12vw;
+  cursor: pointer;
+}
+
 @media (max-width: 1024px) {
   .hero {
     min-height: auto;
@@ -80,6 +96,9 @@
   .heroContent p{
     font-size: 12px;
   }
+  .registerBtn {
+    width: 30vw;
+  }
 }
 
 @media (max-width: 767px) {
@@ -88,6 +107,9 @@
     }
     .heroContent p{
       font-size: 12px;
+    }
+    .registerBtn {
+        width: 40vw;
     }
 }
 

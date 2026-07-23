@@ -13,34 +13,38 @@
 }
 
 .section {
-  padding: 1em;
+  padding: 40px 0;
   text-align: center;
-  margin-top: 2%;
   font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
+}
+
+.sub {
+    color: #989898;
 }
 
 .title {
   font-size: 40px;
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 40px;
+  margin: 20px 0;
   letter-spacing: -0.02em;
   font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 4px;
-  max-width: 1040px;
+  max-width: 1028px;
   margin: 0 auto;
+  background: #eee;
 }
 
 .card {
   text-align: left;
   padding: 24px 22px;
-  border-radius: 14px;
   transition: background 0.2s ease;
+  background: #fff;
 }
 
 .card:hover {
@@ -74,18 +78,58 @@
   margin: 0;
 }
 
+.card_due-diligence {
+    border-bottom-right-radius: 14px;
+    width: 340px;
+}
+
+.card_research-verification {
+    border-bottom-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    width: 340px;
+}
+
+.card_research-matching {
+    border-bottom-left-radius: 14px;
+    width: 340px;
+}
+
+.card_escrow {
+    border-top-right-radius: 14px;
+    width: 340px;
+}
+
+.card_reporting-dashboards {
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    width: 340px;
+}
+
+.card_portfolio-insights {
+    border-top-left-radius: 14px;
+    width: 340px;
+}
+
+.card_compliance-support {
+    border-top-right-radius: 14px;
+    width: 512px;
+}
+
+.card_ip-governance {
+    border-top-left-radius: 14px;
+    width: 512px;
+}
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+  }
+  .card {
+    width: 95vw;
   }
 }
 
 @media (max-width: 560px) {
   .title {
     font-size: 28px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
   }
 }

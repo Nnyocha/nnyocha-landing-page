@@ -42,7 +42,7 @@ const cards = [
     icon: Structured,
   },
   {
-    key: "communnity",
+    key: "community",
     title: "Community",
     text: "Aggregated impact data across your funded research",
     icon: Community,
@@ -53,23 +53,20 @@ export default function Solved () {
 
     return(
         <section className={styles.section}>
+            <sub className={styles.sub}>How we solved the gap</sub>
             <h2 className={styles.title}>
                 Everything You Need to Move <br /> Your Research Forward
             </h2>
             <div className={styles.grid}>
                 {cards.map((card) => (
-                <div className={styles.card} key={card.key}>
+                <div className={`${styles.card} ${styles[`card_${card.key}`]}`} key={card.key}>
                     <Image src={card.icon} alt={card.title} className={styles.cardIcon} />
                     <h3 className={styles.cardTitle}>{card.title}</h3>
                     <p className={styles.cardText}>{card.text}</p>
                 </div>
                 ))}
             </div>
-            <Link 
-              href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <Link href="#waitlist">
             <button className={styles.researcherBtn}>Join as a Researcher</button>
             </Link>
         </section>

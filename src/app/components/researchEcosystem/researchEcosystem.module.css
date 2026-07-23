@@ -13,17 +13,21 @@
 }
 
 .section {
-  padding: 1em;
+  padding: 40px 0;
   text-align: center;
   margin-top: 2%;
   font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
+}
+
+.sub {
+    color: #989898;
 }
 
 .title {
   font-size: 40px;
   font-weight: 700;
   line-height: 1.15;
-  margin-bottom: 40px;
+  margin: 20px 0;
   letter-spacing: -0.02em;
   font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
 }
@@ -34,13 +38,14 @@
   gap: 4px;
   max-width: 1040px;
   margin: 0 auto;
+  background: #eee;
 }
 
 .card {
   text-align: left;
   padding: 24px 22px;
-  border-radius: 14px;
   transition: background 0.2s ease;
+  background: #fff;
 }
 
 .card:hover {
@@ -72,6 +77,19 @@
   color: #8a8a8a;
   line-height: 1.5;
   margin: 0;
+}
+
+.card_funders {
+    border-bottom-right-radius: 14px;
+}
+
+.card_researchers {
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.card_mentors {
+    border-bottom-left-radius: 14px;
 }
 
 @media (max-width: 900px) {

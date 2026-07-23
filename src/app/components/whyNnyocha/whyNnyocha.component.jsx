@@ -5,13 +5,15 @@ import styles from './whyNnyocha.module.css';
 export default function WhyNnyocha () {
     return (
         <section className={styles.section}>
-            <sub className={styles.sub}>Why Nnyocha Exists</sub>
-            <p className={styles.text}>Across Africa, exceptional research is being done every day. Too  <br />
-            much of it remains  disconnected from the funding, mentorship, <br /> 
-            and partnerships it needs to create lasting impact.  Researchers <br /> 
-            struggle to gain visibility. Funders struggle to find credible <br /> opportunities. <br />
-            Nnyocha  was built to close that gap, not with a directory or a <br />
-            forum, but with real infrastructure.</p>
+            <div className={styles.upper}>
+                <sub className={styles.sub}>Why Nnyocha Exists</sub>
+                <p className={styles.text}>Across Africa, exceptional research is being done every day. Too  <br />
+                much of it remains  disconnected from the funding, mentorship, <br /> 
+                and partnerships it needs to create lasting impact.  Researchers <br /> 
+                struggle to gain visibility. Funders struggle to find credible <br /> opportunities. <br />
+                Nnyocha  was built to close that gap, not with a directory or a <br />
+                forum, but with real infrastructure.</p>
+            </div>
             <hr className={styles.hr} />
             <div className={styles.lower}>
                 <div className={styles.mission}>

@@ -4,7 +4,6 @@ import Image from "next/image";
 import BuildingInfrastructure from "../components/buildingInfrastructure/buildingInfrastructure.component";
 import Navbar from "../components/navbar/navbar.component";
 import AboutHero from "../../../public/images/about-hero.webp";
-import Launch from "../components/launch/launch.component";
 import WhyNnyocha from "../components/whyNnyocha/whyNnyocha.component";
 import FoundersLetter from "../components/foundersLetter/foundersLetter.component";
 import FAQs from "../components/faqs/faqs.component";
@@ -19,7 +18,6 @@ export default function About () {
             <Navbar />
             <BuildingInfrastructure />
             <Image src={AboutHero} alt="Funder Hero" width={1300} height={550} className="hero-image"/>
-            <Launch />
             <WhyNnyocha />
             <ResearchEcosystem />
             <FoundersLetter />

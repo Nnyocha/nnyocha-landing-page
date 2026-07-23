@@ -9,9 +9,7 @@ export default function ResearchBreakthroughs () {
             <h1 className={styles.title}>Help Shape Africa&apos;s Next <br /> Research Breakthroughs</h1>
             <p>Join a community of experienced researchers, industry <br /> practitioners, and innovation leaders</p>
             <Link 
-              href="https://docs.google.com/forms/d/e/1FAIpQLScqs9HTp6U3K5toyWSKkuTiFiW-AdSx49wuplfYiHiToySm8A/viewform?pli=1"
-              target="_blank"
-              rel="noreferrer noopener"
+              href="#mentor-waitlist"
             >
             <button className={styles.mentorBtn}>Become a Mentor</button>
             </Link>

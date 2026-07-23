@@ -10,6 +10,7 @@ import styles from "./steps.module.css";
 export default function Steps() {
     return (
         <section className={styles.section}>
+            <sub className={styles.sub}>How It Works</sub>
             <h2 className={styles.title}>Steps to funding <br /> your first research</h2>
             <div className={styles.steps}>
                 <div className={styles.stepGroup}>

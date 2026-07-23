@@ -65,13 +65,14 @@ const cards = [
 export default function HelpResearchers() {
   return (
     <section className={styles.section}>
+      <sub className={styles.sub}>How We Help Funders</sub>
       <h2 className={styles.title}>
         We bring everything you <br /> need to fund confidently
       </h2>
 
       <div className={styles.grid}>
         {cards.map((card) => (
-          <div className={styles.card} key={card.key}>
+          <div className={`${styles.card} ${styles[`card_${card.key}`]}`} key={card.key}>
             <Image src={card.icon} alt={card.title} className={styles.cardIcon} />
             <h3 className={styles.cardTitle}>{card.title}</h3>
             <p className={styles.cardText}>{card.text}</p>
