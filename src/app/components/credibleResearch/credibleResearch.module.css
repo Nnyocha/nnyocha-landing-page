@@ -42,3 +42,15 @@
   width: 12vw;
   cursor: pointer;
 }
+
+@media (max-width: 767px) {
+  .registerBtn {
+    width: 40vw;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .section p {
+    font-size: 11px;
+  }
+}

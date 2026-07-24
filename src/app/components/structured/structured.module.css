@@ -99,4 +99,10 @@
     .stepOne, .stepTwo, .stepThree, .stepFour {
         margin: 1%;
     }
+    .title {
+        font-size: 30px;
+    }
+    .stepTitle {
+        font-size: 14px;
+    }
 }

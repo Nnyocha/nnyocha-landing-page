@@ -47,4 +47,7 @@
   .mentorBtn{
     width: 40vw;
   }
+  .title {
+    font-size: 30px;
+  }
 }

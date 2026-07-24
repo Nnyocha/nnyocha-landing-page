@@ -47,4 +47,10 @@
   .researcherBtn{
     width: 40vw;
   }
+  .title {
+    font-size: 30px;
+  }
+  .section p {
+    font-size: 12px;
+  }
 }

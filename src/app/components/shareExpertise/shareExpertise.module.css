@@ -74,4 +74,10 @@
     margin-top: 5%;
     margin-left: 2%;
   }
+  .mentorBtn {
+    width: 50vw;
+  }
+  .left {
+    margin: 0 auto;
+  }
 }

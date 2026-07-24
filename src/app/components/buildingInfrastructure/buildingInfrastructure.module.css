@@ -29,3 +29,9 @@
   letter-spacing: -0.02em;
   font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
 }
+
+@media (max-width: 767px) {
+  .title{
+    font-size: 30px;
+  }
+}

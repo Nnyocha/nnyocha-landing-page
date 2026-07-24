@@ -22,7 +22,6 @@
   align-items: flex-start;
 }
 
-
 .slide img {
   width: 100%;
   border-radius: 24px;
@@ -43,6 +42,8 @@
   padding: 10px 14px;
   cursor: pointer;
   z-index: 2;
+  border-radius: 50%;
+  font-size: 18px;
 }
 
 .prev { left: 10px; }
@@ -69,4 +70,56 @@
   background: #e76f00;
   width: 18px;
   border-radius: 10px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .slide {
+    height: 500px;
+  }
+
+  .slide img {
+    border-radius: 16px;
+    padding: 0.75em;
+  }
+
+  .prev,
+  .next {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .slide {
+    height: auto;
+    min-height: 260px;
+  }
+
+  .slide img {
+    border-radius: 12px;
+    padding: 0.5em;
+    object-fit: cover;
+    object-position: top;
+    height: 260px;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+
+  .dots {
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .active {
+    width: 22px;
+  }
 }
