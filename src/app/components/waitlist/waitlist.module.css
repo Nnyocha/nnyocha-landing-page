@@ -62,41 +62,6 @@
   font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
 }
 
-.heroContent p {
-  font-size: 14px;
-  color: #ddd;
-  margin-bottom: 24px;
-  line-height: 1.5;
-}
-
-.waitlistBtn {
-  background: #f7f7f7;
-  padding: 1em;
-  border-radius: 6px;
-  border: none;
-  width: 10vw;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.registerBtn {
-  background: #e76f00;
-  color: #ffffff;
-  padding: 1em;
-  border: none;
-  border-radius: 6px;
-  margin-left: 3%;
-  width: 10vw;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background 0.2s;
-}
-
-.registerBtn:hover {
-  background: #d05f00;
-}
-
 .heroRight {
   flex: 0.9;
   display: flex;
@@ -121,29 +86,6 @@
   margin-bottom: 16px;
   font-size: 16px;
   font-family: 'Gopher', Georgia, 'Times New Roman', Times, serif;
-}
-
-.toggle {
-  display: flex;
-  background: #e0e0e0;
-  border-radius: 10px;
-  padding: 4px;
-  margin-bottom: 18px;
-}
-
-.toggleBtn {
-  flex: 1;
-  border: none;
-  background: transparent;
-  padding: 8px;
-  font-size: 13px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.toggleBtn:hover {
-  background: rgba(0,0,0,0.05);
 }
 
 .active {
@@ -185,7 +127,6 @@
 
 .submitBtn {
   margin-top: 10px;
-  background: #d6d6d6;
   color: #ffffff;
   border: none;
   padding: 12px;
@@ -278,10 +219,6 @@
 
   .heroContent h1 {
     font-size: 36px;
-  }
-
-  .heroContent p {
-    font-size: 13px;
   }
 
   .form {

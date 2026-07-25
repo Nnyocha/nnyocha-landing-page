@@ -54,6 +54,7 @@ export default function MentorWaitlist() {
         email: formData.email.trim(),
         organization: formData.organization.trim() || '',
         interest: formData.interest.trim(),
+        role: 'mentor',
         submittedAt: new Date().toISOString(),
         status: 'pending',
         createdAt: new Date()
@@ -108,6 +109,12 @@ export default function MentorWaitlist() {
     }
   };
 
+  const getButtonColor = () => {
+    if (!isFormFilled || isSubmitting) {
+      return '#d1d5db';
+    }
+    return '#452c15';
+  };
 
   const getButtonText = () => {
     if (isSubmitting) return 'Submitting...';
@@ -173,6 +180,7 @@ export default function MentorWaitlist() {
               type="submit"
               className={styles.submitBtn}
               disabled={!isFormFilled || isSubmitting}
+              style={{ backgroundColor: getButtonColor() }}
             >
               {getButtonText()}
             </button>

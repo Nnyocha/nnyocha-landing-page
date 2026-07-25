@@ -42,7 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 80px;
+  gap: 40px;
   margin-top: 8%;
   padding-bottom: 40px;
 }
@@ -55,8 +55,8 @@
   position: relative;
   z-index: 2;
   box-sizing: border-box;
-  width: 260px;
-  height: 220px; /* ensures both cards have the same height */
+  width: 300px;
+  height: 220px;
   margin: 0;
   padding: 1.25em;
   background: #fff;
@@ -66,10 +66,29 @@
     drop-shadow(0 14px 30px rgba(0, 0, 0, 0.08));
 }
 
-.cardLeft {
-  padding-right: calc(1.25em + var(--tear-depth));
-  transform: rotate(9deg);
+.cardLeftShell {
+  --tear-depth: 42px;
+
+  width: 300px;
+  height: 220px;
+  flex: 0 0 260px;
+  transform: rotate(5deg);
   transform-origin: bottom right;
+
+  filter:
+    drop-shadow(0 12px 0 #a44f00)
+    drop-shadow(0 14px 30px rgba(0, 0, 0, 0.08));
+}
+
+.cardLeft {
+  height: 100%;
+  margin: 0;
+  padding: 1.25em calc(1.25em + var(--tear-depth)) 1.25em 1.25em;
+  transform: none;
+  box-shadow: none;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  filter: none;
 
   clip-path: polygon(
     0 0,
@@ -82,11 +101,17 @@
   );
 }
 
+.cardLeft::before {
+  content: none;
+}
+
 .cardRight {
   padding-left: 1.25em;
-  transform: rotate(-9deg);
+  transform: rotate(-2deg);
   transform-origin: bottom left;
   overflow: visible;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 .cardRight::before {
@@ -98,7 +123,6 @@
   height: 100%;
   background: #fff;
   pointer-events: none;
-
   clip-path: polygon(
     100% 0,
     0 27%,
@@ -131,15 +155,27 @@
   .title {
     font-size: 30px;
   }
-  .cardLeft,
-  .cardRight {
-    width: 100%;
-    transform: none;
-    margin: 0 0 24px;
+  .cards{
+    gap: 2px;
   }
-
-  .cardLeft::after,
-  .cardRight::after {
-    display: none;
+  .cardLeft {
+    width: 45vw;
+    height: 50vh;
+    margin-left: 20%;
+    transform: rotate(-2deg);
+  }
+  .cardLeft p{
+    font-size: 12px;
+  }
+  .cardRight {
+    width: 45vw;
+    height: 50vh;
+    margin-right: 20%;
+  }
+  .cardRight p {
+    font-size: 12px;
+  }
+  .gapIndicator {
+    margin-top: 10%;
   }
 }
