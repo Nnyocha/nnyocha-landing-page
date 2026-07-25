@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { db } from '../../../../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import Swal from 'sweetalert2';
@@ -14,17 +14,13 @@ export default function MentorWaitlist() {
     organization: '',
     interest: ''
   });
-  const [isFormFilled, setIsFormFilled] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  useEffect(() => {
-    const { firstName, lastName, email, interest } = formData;
-    const filled = firstName.trim() !== '' && 
-                   lastName.trim() !== '' && 
-                   email.trim() !== '' && 
-                   interest.trim() !== '';
-    setIsFormFilled(filled);
-  }, [formData]);
+  const isFormFilled = 
+    formData.firstName.trim() !== '' && 
+    formData.lastName.trim() !== '' && 
+    formData.email.trim() !== '' && 
+    formData.interest.trim() !== '';
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

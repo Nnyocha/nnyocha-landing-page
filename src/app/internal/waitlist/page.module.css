@@ -1,7 +1,6 @@
 .container {
   max-width: 1400px;
-  margin: 0 auto;
-  padding: 40px 24px;
+  padding: 1em;
   background: #f8fafc;
   min-height: 100vh;
 }
@@ -10,7 +9,7 @@
   font-size: 32px;
   font-weight: 700;
   color: #111827;
-  margin-bottom: 32px;
+  margin: 32px 0;
 }
 
 .stats {

@@ -16,9 +16,6 @@ export default function WaitlistPage() {
   const [activeTab, setActiveTab] = useState('all');
 
   useEffect(() => {
-    fetchWaitlistData();
-  }, []);
-
   const fetchWaitlistData = async () => {
     try {
       const querySnapshot = await getDocs(
@@ -42,6 +39,9 @@ export default function WaitlistPage() {
       setLoading(false);
     }
   };
+
+  fetchWaitlistData();
+}, []);
 
   const getFilteredData = () => {
     if (activeTab === 'all') {

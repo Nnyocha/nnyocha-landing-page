@@ -9,34 +9,26 @@ import styles from "./carousel.module.css";
 
 export default function Carousel() {
   const images = [Image1, Image2, Image3];
-  const extended = [...images, ...images];
-
   const [current, setCurrent] = useState(0);
-  const [transition, setTransition] = useState(true);
 
-  // autoplay
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => prev + 1);
+      setCurrent((prev) => (prev + 1) % images.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
-  // seamless reset
-  useEffect(() => {
-    if (current === images.length) {
-      setTimeout(() => {
-        setTransition(false);
-        setCurrent(0);
-      }, 600);
-    } else {
-      setTransition(true);
-    }
-  }, [current, images.length]);
+  const next = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
+  };
 
-  const next = () => setCurrent((prev) => prev + 1);
-  const prev = () =>
-    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const prev = () => {
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToSlide = (index) => {
+    setCurrent(index);
+  };
 
   return (
     <div className={styles.carousel}>
@@ -45,17 +37,18 @@ export default function Carousel() {
           className={styles.track}
           style={{
             transform: `translateX(-${current * 100}%)`,
-            transition: transition ? "transform 0.6s ease" : "none",
+            transition: "transform 0.6s ease",
           }}
         >
-          {extended.map((src, index) => (
+          {images.map((src, index) => (
             <div key={index} className={styles.slide}>
-              {/* 👇 NO className here */}
               <Image
                 src={src}
-                alt={`slide-${index}`}
+                alt={`slide-${index + 1}`}
                 width={1200}
                 height={700}
+                className={styles.image}
+                priority={index === 0}
               />
             </div>
           ))}
@@ -63,18 +56,20 @@ export default function Carousel() {
       </div>
 
       {/* Arrows */}
-      <button className={styles.prev} onClick={prev}>‹</button>
-      <button className={styles.next} onClick={next}>›</button>
+      <button className={styles.prev} onClick={prev} aria-label="Previous slide">
+        ‹
+      </button>
+      <button className={styles.next} onClick={next} aria-label="Next slide">
+        ›
+      </button>
 
       {/* Dots */}
       <div className={styles.dots}>
         {images.map((_, index) => (
           <span
             key={index}
-            className={`${styles.dot} ${
-              current % images.length === index ? styles.active : ""
-            }`}
-            onClick={() => setCurrent(index)}
+            className={`${styles.dot} ${current === index ? styles.active : ""}`}
+            onClick={() => goToSlide(index)}
           />
         ))}
       </div>
