@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Image1 from "../../../../public/images/carousel.svg";
-import Image2 from "../../../../public/images/funder-hero.webp";
 import Image3 from "../../../../public/images/researcher-hero.svg";
+import Image2 from "../../../../public/images/funder-hero.svg";
+import Image1 from "../../../../public/images/image-3.svg";
 import styles from "./carousel.module.css";
 
 export default function Carousel() {

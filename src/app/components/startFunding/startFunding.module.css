@@ -19,10 +19,9 @@
   max-width: 1200px;
   margin: 0 auto;
   flex-direction: row;
-  background: url('../../../../public/images/waiting-list.svg') center/cover no-repeat;
+  background: url('../../../../public/images/join.svg') top/cover no-repeat;
   color: #fff;
   border-radius: 20px;
-  margin-top: 2%;
   align-items: stretch;
   font-family: 'OakSans', Georgia, 'Times New Roman', Times, serif;
 }

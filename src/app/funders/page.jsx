@@ -1,7 +1,7 @@
 import CredibleResearch from "../components/credibleResearch/credibleResearch.component";
 import Navbar from "../components/navbar/navbar.component";
 import Image from "next/image";
-import FunderHero from "../../../public/images/funder-hero.webp";
+import FunderHero from "../../../public/images/funder-hero.svg";
 import "../globals.css";
 import HelpResearchers from "../components/helpResearchers/helpResearchers.component";
 import CoreBenefits from "../components/coreBenefits/coreBenefits.component";
