@@ -19,7 +19,7 @@
   max-width: 1200px;
   margin: 0 auto;
   flex-direction: row;
-  background: url('../../../../public/images/join.svg') top/cover no-repeat;
+  background:#f0f0f0 url('../../../../public/images/join.svg') top/cover no-repeat;
   color: #fff;
   border-radius: 20px;
   align-items: stretch;
