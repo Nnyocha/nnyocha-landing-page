@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '../../context/AuthContext';
 import Navbar from '../../components/navbar/navbar.component';
 import { db } from '../../../../firebase';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
@@ -8,6 +10,9 @@ import * as XLSX from 'xlsx';
 import styles from './page.module.css';
 
 export default function WaitlistPage() {
+  const { user, isAuthenticated, loading: authLoading, logout } = useAuth();
+  const router = useRouter();
+  
   const [waitlistData, setWaitlistData] = useState({
     researchers: [],
     mentors: []
@@ -15,33 +20,43 @@ export default function WaitlistPage() {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('all');
 
+  // Redirect if not authenticated
   useEffect(() => {
-  const fetchWaitlistData = async () => {
-    try {
-      const querySnapshot = await getDocs(
-        query(collection(db, 'waitlist'), orderBy('submittedAt', 'desc'))
-      );
-      
-      const allData = [];
-      querySnapshot.forEach((doc) => {
-        allData.push({ id: doc.id, ...doc.data() });
-      });
+    if (!authLoading && !isAuthenticated) {
+      router.push('/login');
+    }
+  }, [authLoading, isAuthenticated, router]);
 
-      const grouped = {
-        researchers: allData.filter(item => item.role === 'researcher'),
-        mentors: allData.filter(item => item.role === 'mentor')
+  // Fetch data when authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      const fetchWaitlistData = async () => {
+        try {
+          const querySnapshot = await getDocs(
+            query(collection(db, 'waitlist'), orderBy('submittedAt', 'desc'))
+          );
+          
+          const allData = [];
+          querySnapshot.forEach((doc) => {
+            allData.push({ id: doc.id, ...doc.data() });
+          });
+
+          const grouped = {
+            researchers: allData.filter(item => item.role === 'researcher'),
+            mentors: allData.filter(item => item.role === 'mentor')
+          };
+
+          setWaitlistData(grouped);
+        } catch (error) {
+          console.error('Error fetching waitlist data:', error);
+        } finally {
+          setLoading(false);
+        }
       };
 
-      setWaitlistData(grouped);
-    } catch (error) {
-      console.error('Error fetching waitlist data:', error);
-    } finally {
-      setLoading(false);
+      fetchWaitlistData();
     }
-  };
-
-  fetchWaitlistData();
-}, []);
+  }, [isAuthenticated]);
 
   const getFilteredData = () => {
     if (activeTab === 'all') {
@@ -109,6 +124,23 @@ export default function WaitlistPage() {
     XLSX.writeFile(wb, fileName);
   };
 
+  const handleLogout = async () => {
+    const result = await logout();
+    if (result.success) {
+      router.push('/login');
+    }
+  };
+
+  // Show loading state while checking auth
+  if (authLoading) {
+    return <div className={styles.loading}>Loading...</div>;
+  }
+
+  // Don't render if not authenticated (will redirect)
+  if (!isAuthenticated) {
+    return null;
+  }
+
   if (loading) {
     return <div className={styles.loading}>Loading waitlist data...</div>;
   }
@@ -116,8 +148,17 @@ export default function WaitlistPage() {
   return (
     <div className={styles.container}>
       <Navbar />
-      <h1 className={styles.title}>Waitlist Submissions</h1>
+      <div className={styles.header}>
+        <h1 className={styles.title}>Waitlist Submissions</h1>
+        <button onClick={handleLogout} className={styles.logoutBtn}>
+          Logout
+        </button>
+      </div>
       
+      <div className={styles.userInfo}>
+        <span>Logged in as: <strong>{user?.email}</strong></span>
+      </div>
+
       <div className={styles.stats}>
         <div className={styles.statCard}>
           <span className={styles.statNumber}>{getRoleCount('all')}</span>
